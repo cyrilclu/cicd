@@ -1,0 +1,5 @@
+[rhel-7-server-rpms]
+name=rhel-7-server-rpms
+baseurl=http://registry.example.com/repos/rhel-7-server-rpms
+gpgcheck=0
+enabled=1

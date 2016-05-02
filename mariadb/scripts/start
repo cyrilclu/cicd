@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+
+if [[ -e /scripts/firstrun ]]; then
+    /scripts/firstrun_maria
+    rm /scripts/firstrun
+else
+    if [[ -e ${DATA_DIR}/mysql.sock ]]; then
+        rm -f ${DATA_DIR}/mysql.sock
+    fi
+fi
+
+exec /usr/bin/mysqld_safe
